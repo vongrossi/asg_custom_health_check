@@ -1,5 +1,5 @@
 #!/bin/bash
-URL="http://localhost:9090/metrics"
+URL=$1
 
 INSTANCE=$(curl http://169.254.169.254/latest/meta-data/instance-id)
 AWS_DEFAULT_REGION=$(curl http://169.254.169.254/latest/dynamic/instance-identity/document|grep region|awk -F\" '{print $4}')
